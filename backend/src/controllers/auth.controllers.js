@@ -82,3 +82,5 @@ export const logoutController = (req, res) => {
     res.status(500).json({ msg: 'Server Error' });
   }
 };
+
+export const updateProfile = async (req, res) => {};
