@@ -44,7 +44,7 @@ const SignUpPage = () => {
     if (success === true) signup(formData);
   };
   return (
-    <div className="min-h-screen grid lg:grid-cols-2">
+    <div className="min-h-screen pt-11 grid lg:grid-cols-2">
       {/* Left Side */}
       <div className="flex flex-col justify-center items-center p-6 sm:p-12">
         <div className="w-full max-w-md space-y-8">
