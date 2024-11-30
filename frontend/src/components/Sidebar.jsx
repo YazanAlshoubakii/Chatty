@@ -11,7 +11,6 @@ const Sidebar = () => {
 
   useEffect(() => {
     getUsers();
-    console.log(users);
   }, [getUsers]);
 
   if (isUsersLoading) return <SidebarSkeleton />;
@@ -58,7 +57,7 @@ const Sidebar = () => {
               <div className="hidden lg:block text-left min-w-0">
                 <div className="font-medium truncate">{user.fullName}</div>
                 <div className="text-sm text-zinc-400">
-                  {onlineUsers.includes(user._id) ? 'Online' : 'Offline'}
+                  {users.includes(user._id) ? 'Online' : 'Offline'}
                 </div>
               </div>
             </button>
