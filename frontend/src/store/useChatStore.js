@@ -46,7 +46,7 @@ export const useChatStore = create((set, get) => ({
       );
       set({ messages: [...messages, res.data] });
     } catch (error) {
-      toast.error(error.response.data.msg);
+      toast.error('Field to send the Message');
       console.log('error sending msg', error);
     }
   },
