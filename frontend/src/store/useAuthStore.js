@@ -9,7 +9,7 @@ const BASE_URL =
 export const useAuthStore = create((set, get) => ({
   authUser: null,
   isSigningUp: false,
-  isLoggingIng: false,
+  isLoggingIn: false,
   isUpdatingProfile: false,
   onlineUsers: [],
   isCheckingAuth: true,
@@ -44,7 +44,7 @@ export const useAuthStore = create((set, get) => ({
   },
 
   login: async (data) => {
-    set({ isLoggingIng: true });
+    set({ isLoggingIn: true });
     try {
       const res = await axiosInstance.post('/auth/login', data);
       set({ authUser: res.data });
@@ -54,7 +54,7 @@ export const useAuthStore = create((set, get) => ({
       toast.error(error.response.data.msg);
       console.log('error in login : ', error);
     } finally {
-      set({ isLoggingIng: false });
+      set({ isLoggingIn: false });
     }
   },
 
